@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Main page
+{% endblock %}
+
+{% block body %}
+
+<br>
+    <h2>Смартфони</h2>
+    <br>
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    {% for el in data %}
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">{{ el.title }}</h4>
+          </div>
+          <div class="card-body">
+
+            <img src="{{ el.img }}" width="260" height="260">
+          <div class="container py-3">
+            <ul class="list-unstyled mt-3 mb-4">
+
+              <li>Діагональ дисплея {{ el.disp }}"</li>
+              <li>{{ el.proc }}</li>
+              <li>Оперативна пам'ять {{ el.memor }} ГБ</li>
+              <li>Вбудована пам'ять {{ el.sdmem }} ГБ</li>
+              <br>
+              <h2 class="card-title pricing-card-title">{{ el.price }} грн<small class="text-muted fw-light"></small></h2>
+            </ul>
+            </div>
+            <a href="/buy/{{ el.id }}" class="w-100 btn btn-lg btn-outline-primary">Купити</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+
+  </main>
+{% endblock %}

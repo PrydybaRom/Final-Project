@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Додати товар</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Введіть назву"><br>
+        <input type="text" name="img" id="img" class="form-control" placeholder="Адрес зображення"><br>
+        <input type="text" name="disp" id="disp" class="form-control" placeholder="Введіть діагональ"><br>
+        <input type="text" name="proc" id="proc" class="form-control" placeholder="Введіть назву процесора"><br>
+        <input type="text" name="memor" id="memor" class="form-control" placeholder="Введіть кількість ГБ Оперативної пам'яті"><br>
+        <input type="text" name="sdmem" id="sdmem" class="form-control" placeholder="Введіть кількість ГБ Пам'яті"><br>
+        <input type="number" name="price" id="price" class="form-control" placeholder="Введіть ціну"><br>
+        <button class="btn btn-success" type="submit">Додати товар</button><br>
+    </form>
+</div>
+{% endblock %}
